@@ -7,7 +7,7 @@ function [ d ] = get_delta( L, A, B, i, j, alpha, theta )
         dL = L(i) - L(j);
         dA = A(i) - A(j);
         dB = B(i) - B(j);
-        dC = sqrt(dA*dA + dB*dB);
+        dC = sqrt(double(dA*dA + dB*dB));
         sign = 1;
         if (dA * cos(theta) + dB * sin(theta) < 0)
             sign = -1;
